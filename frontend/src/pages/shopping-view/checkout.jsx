@@ -87,16 +87,16 @@ function ShoppingCheckout() {
                 if (verifyRazorpayPayment.fulfilled.match(verificationResult)) {
                   console.log("Payment Successful", verificationResult.payload);
                   toast({ title: "Payment Successful!", variant: "success" });
-                  window.location.href = "http://localhost:5173/shop/success";
+                  window.location.href = `${import.meta.env.VITE_API_URL}/shop/success`;
                 } else {
                   console.error("Payment Verification Failed", verificationResult.error);
                   toast({ title: "Payment Failed!", variant: "destructive" });
-                  window.location.href = "http://localhost:5173/shop/cancel";
+                  window.location.href = `${import.meta.env.VITE_API_URL}/shop/cancel`;
                 }
               } catch (error) {
                 console.error("Verification Error:", error);
                 toast({ title: "Payment verification failed!", variant: "destructive" });
-                window.location.href = "http://localhost:5173/shop/cancel";
+                window.location.href = `${import.meta.env.VITE_API_URL}/shop/cancel`;
               }
             },
             prefill: {
