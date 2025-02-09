@@ -87,7 +87,7 @@ function ShoppingHome() {
       
       {/* ✅ "Get Freshness at Your Step Door!" Text Added */}
       <h2 className="text-center text-2xl md:text-3xl font-bold mt-6">
-        Get <span className="text-green-600">Freshness</span> at Your Step Door!
+        Get <span className="text-green-600">Freshness</span> at Your Door Step  !
       </h2>
 
       {/* ✅ Banner moved slightly down, original size maintained */}
