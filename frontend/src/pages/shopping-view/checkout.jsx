@@ -114,7 +114,7 @@ function ShoppingCheckout() {
               ondismiss: function () {
                 console.log("User canceled the payment");
                 toast({ title: "Payment Cancelled", variant: "destructive" });
-                window.location.href = "http://localhost:5173/shop/cancel";
+                window.location.href = `${import.meta.env.VITE_API_URL}/shop/cancel`;
               },
             },
           });
